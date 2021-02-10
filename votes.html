@@ -2,39 +2,54 @@
 <html lang="en">
 
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-			
 		<title>Voting App</title>
 		
-		<link rel="stylesheet" href="styles.css">
-		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</head>
 
 	<body>	
-		<div class="content">
+	
+		<div class="container pt-4 text-center">
 			
-			<label id="title">Let's Vote</label>
-			<br><br>
-			<!--
-			one click = vote,hold click = remove one vote,double click = erase player name
-			-->
-			<table id="table">
-				<tr>
-					<th>Names</th>
-					<th>Votes</th>
-				</tr>
-			</table>
+			<label class="h2">Let's Vote</label>
 			<br>
 			
-			<label>Add player:</label><br>
-			<input type="text" id="fname">
-			<button type="button">Add</button>
+			<label class="small">
+				Click on a player to add vote, hold click to erase a vote and double click to erase a player's name.
+			</label>
 			<br><br>
 			
-			<button type="button">Reset Votes</button>
+			<div class="table-responsive">
+			
+				<table id="table" class="table table-bordered">
+					<thead id="thead">
+						<tr>
+							<th class="text-center">Names</th>
+							<th class="text-center" colspan="2">Votes</th>
+						</tr>
+					</thead>
+					<tbody id="tbody">
+					</tbody>
+				</table>
+				
+			</div>
+			<br>
+			
+			<label class="h6">Add player:</label><br>
+			<input type="text" id="addplayer">
+			<button type="button" id="addbutton" class="btn btn-md btn-primary">Add</button>
+			<br><br>
+			
+			<button type="button" id="resetbutton" class="btn btn-md btn-warning">Reset Votes</button>
 			
 		</div>
+		
 	</body>
 
 <script src="scripts.js"></script>
