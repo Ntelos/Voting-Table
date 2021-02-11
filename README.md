@@ -8,7 +8,10 @@ An interactive table page to keep count of the <b>votes</b> for any boardgame or
 
 ## Demo
 By visiting the <i>.votehtml</i> page you can:
-* 
+* Add infinite players' name to the table by typing their name and pressing the Add button.
+* Add and subtract votes by one using the +/- buttons to update the corresponding player's votes.
+* Draw a line over a player's name using the Erase button that's on that player's row. That way you can indicate the exclusion of that player from a voting round.
+* Reset all the players' votes by pressing the Reset Votes button
 
 <b>Note</b> that refreshing the page resets the whole board!
 
@@ -17,4 +20,4 @@ By visiting the <i>.votehtml</i> page you can:
 
 ## Future Updates
 * Style up the page
-* Delete selected row
+* Sticky table header when scrolling
