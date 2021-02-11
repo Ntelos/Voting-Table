@@ -1,12 +1,15 @@
 $(function(){
 	
 	var rowIdx = 1;
+	var addname;
 
 	$("#addbutton").click(function(){
 		
+		addname = $('#addplayer').val();
+		
 		$('#tbody').append(`<tr id="R${rowIdx}"> 
 								<td class="row-index text-center"> 
-									<p>Row ${rowIdx} insert name</p>
+									<p>${addname}</p>
 								</td> 
 								<td class="text-center"> 
 									<p id="VR${rowIdx++}">0</p>
@@ -26,8 +29,25 @@ $(function(){
 									</div>
 								</td> 
 							</tr>`);
+							
 	});
 	
-	//erase overlines name and disables votes
+	$("#addvote").click(function(){
+		
+		//add id to buttons and make add a vote to the corresponding player
+		
+	});
+	
+	$("#subvote").click(function(){
+		
+		//add id to buttons and make subtrackt a vote to the corresponding player
+		
+	});
+	
+	$("#resetbutton").click(function(){
+		
+		//reset all votes to 0
+		
+	});
 
 });
