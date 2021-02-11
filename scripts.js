@@ -22,13 +22,15 @@ $(function(){
 												<button class="btn btn-danger" type="button">-</button>
 											</div>
 											<div class="col-6">
-												<button class="btn btn-warning" type="button">Erase</button>
-												<button class="btn btn-outline-danger" type="button">Remove</button> 
+												<button class="btn btn-warning erase" type="button">Erase</button>
+												<button class="btn btn-outline-danger remove" type="button">Remove</button> 
 											</div>
 										</div>
 									</div>
 								</td> 
 							</tr>`);
+							
+		$('#addplayer').val("");
 							
 	});
 	
@@ -40,7 +42,19 @@ $(function(){
 	
 	$("#subvote").click(function(){
 		
-		//add id to buttons and make subtrackt a vote to the corresponding player
+		//add id to buttons and make subtract a vote to the corresponding player
+		
+	});
+	
+	$('#tbody').on('click', '.remove', function () {
+		
+		
+		
+	});
+	
+	$('#tbody').on('click', '.erase', function () {
+		
+		//line over the corresponding player's name
 		
 	});
 	
