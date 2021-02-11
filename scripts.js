@@ -18,8 +18,8 @@ $(function(){
 									<div class="container-fluid">
 										<div class="row">
 											<div class="col-6">
-												<button class="btn btn-success" type="button">+</button>
-												<button class="btn btn-danger" type="button">-</button>
+												<button class="btn btn-success addvote" type="button">+</button>
+												<button class="btn btn-danger subvote" type="button">-</button>
 											</div>
 											<div class="col-6">
 												<button class="btn btn-warning erase" type="button">Erase</button>
@@ -34,27 +34,33 @@ $(function(){
 							
 	});
 	
-	$("#addvote").click(function(){
+	$('#tbody').on('click', '.addvote', function () {
 		
-		//add id to buttons and make add a vote to the corresponding player
+		
 		
 	});
 	
-	$("#subvote").click(function(){
+	$('#tbody').on('click', '.subvote', function () {
 		
-		//add id to buttons and make subtract a vote to the corresponding player
+		
 		
 	});
 	
 	$('#tbody').on('click', '.remove', function () {
 		
-		
+		$(this).closest('tr').remove();
+		rowIdx--;
 		
 	});
 	
 	$('#tbody').on('click', '.erase', function () {
 		
-		//line over the corresponding player's name
+		$(this).closest('tr').find('p').first().css({"text-decoration": "line-through"});
+		
+		$(this).closest('td').find('button').attr("disabled", true);
+		$(this).closest('td').find('button').last().attr("disabled", false);
+		
+		$(this).closest('tr').find('p').last().text("-");
 		
 	});
 	
