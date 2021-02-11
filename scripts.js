@@ -12,7 +12,7 @@ $(function(){
 									<p>${addname}</p>
 								</td> 
 								<td class="text-center"> 
-									<p id="VR${rowIdx++}">0</p>
+									<p class="votes">0</p>
 								</td>
 								<td class="text-center"> 
 									<div class="container-fluid">
@@ -36,13 +36,21 @@ $(function(){
 	
 	$('#tbody').on('click', '.addvote', function () {
 		
-		
+		var voteselement = $(this).closest('tr').find('p').last();
+		var votesnumber = parseInt(voteselement.text(), 10);
+		votesnumber++;
+		var votesstring = votesnumber.toString();
+		voteselement.text(votesstring);
 		
 	});
 	
 	$('#tbody').on('click', '.subvote', function () {
 		
-		
+		var voteselement = $(this).closest('tr').find('p').last();
+		var votesnumber = parseInt(voteselement.text(), 10);
+		votesnumber--;
+		var votesstring = votesnumber.toString();
+		voteselement.text(votesstring);
 		
 	});
 	
@@ -55,18 +63,18 @@ $(function(){
 	
 	$('#tbody').on('click', '.erase', function () {
 		
-		$(this).closest('tr').find('p').first().css({"text-decoration": "line-through"});
+		$(this).closest('tr').find('p').first().css({"text-decoration": "line-through", "color": "red"});
 		
 		$(this).closest('td').find('button').attr("disabled", true);
 		$(this).closest('td').find('button').last().attr("disabled", false);
 		
-		$(this).closest('tr').find('p').last().text("-");
+		$(this).closest('tr').find('p').last().text("0");
 		
 	});
 	
 	$("#resetbutton").click(function(){
 		
-		//reset all votes to 0
+		$('#tbody').find('.votes').text("0");
 		
 	});
 
