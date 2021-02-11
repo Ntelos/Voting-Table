@@ -16,7 +16,7 @@ By visiting the <i>vote.html</i> page you can:
 <b>Note</b> that refreshing the page resets the whole board!
 
 
-<!-- ![Demo Screenshot from the index page](https://github.com/Ntelos/Voting-Table/blob/main/demo_screenshot.png?raw=true) -->
+![Demo Screenshot from the index page](https://github.com/Ntelos/Voting-Table/blob/main/demo_screenshot.png?raw=true)
 
 ## Future Updates
 * Style up the page
